@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triangle</title>
+</head>
+<body>
+    <table border="2", width="30%" , height="100" , align="center" ,cellspacing="0">
+        <tr bgcolor="pink">
+            <th>Base:</th>
+            <th id="base"></th>
+        </tr>
+        <tr bgcolor="pink">
+            <th>Height:</th>
+            <th id="height"></th>
+        </tr>
+        <tr bgcolor="pink">
+            <th>Area of triangle(0.5 * b * h)</th>
+            <th id="AreaofTriangle"></th>
+        </tr>
+    </table>
+</body>
+<script>
+    let b=parseInt(prompt("Enter triangle base: "));
+    let h=parseInt(prompt("Enter triangle height: "));
+    let areaofTriangle = (0.5 * b * h);
+    document.getElementById('base').innerHTML=b;
+    document.getElementById('height').innerHTML=h;
+    document.getElementById('AreaofTriangle').innerHTML=areaofTriangle; 
+</script>
+</html>

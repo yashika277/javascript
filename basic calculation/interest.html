@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>interest</title>
+</head>
+<body>
+    <table border="2" , width="30%" , height="100" , align="center" ,cellspacing="0">
+        <tr bgcolor="pink">
+            <td>Amount is: </td>
+            <td id="Amount"> </td>
+        </tr>
+        <tr bgcolor="pink">
+            <td>Rate of Interest is: </td>
+            <td id="Interest"></td>
+        </tr>
+        <tr bgcolor="pink">
+            <td>Time Duration is: </td>
+            <td id="Duration"> </td>
+        </tr>
+        <tr bgcolor="pink">
+            <th>Rate of Interest is (p*r*n/100): </th>
+            <th id="RateofInterest"> </th>
+        </tr>
+        <tr bgcolor="pink">
+            <th>Total Amount:  </th>
+            <th id="TotalAmount"> </th>
+        </tr>
+    </table>
+</body>
+<script>
+    let p = parseFloat(prompt("Enter the Amount: "));
+    let r = parseFloat(prompt("Enter the Rate of Interest: "));
+    let n = parseFloat(prompt("Enter the Time Duration: "));
+    let RateofInterest = (p * r * n)/100;
+    let TotalAmount = RateofInterest + p;    
+
+    document.getElementById('Amount').innerHTML = p;
+    document.getElementById('Interest').innerHTML = r +"%";
+    document.getElementById('Duration').innerHTML = n;
+    document.getElementById('RateofInterest').innerHTML = RateofInterest;
+    document.getElementById('TotalAmount').innerHTML = TotalAmount;
+
+</script>
+</html>

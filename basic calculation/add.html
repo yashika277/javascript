@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add_sub_multi_div</title>
+</head>
+<body>
+    <table width='30%' , height='200' , align='center' , border='1' , cellspacing='0'>
+        <tr bgcolor="grey">
+            <th>Enter first no.</th>
+            <th id="first"></th>
+        </tr>
+        <tr bgcolor="grey">
+            <th>Enter second no.</th>
+            <th id="second"></th>
+        </tr>
+        <tr bgcolor="pink">
+            <td>Addition:</td>
+            <td id="add"></td>
+        </tr>
+        <tr bgcolor="pink">
+            <td>Subtraction:</td>
+            <td id="sub"></td>
+        </tr>
+        <tr bgcolor="pink">
+            <td>Multiplication:</td>
+            <td id="multi"></td>
+        </tr>
+        <tr bgcolor="pink">
+            <td>Division:</td>
+            <td id="div"></td>
+        </tr>
+        <tr bgcolor="pink">
+            <td>Modulas:</td>
+            <td id="mod"> </td>
+        </tr>
+
+    </table>
+</body>
+<script>
+    let A=parseInt(prompt("Enter number A:"));
+    document.getElementById('first').innerHTML=A;
+
+    let B=parseInt(prompt("Enter number B:"));
+    document.getElementById('second').innerHTML=B;
+
+    let add = (A + B);
+    document.getElementById('add').innerHTML = add;
+
+    let sub = (A - B);
+    document.getElementById('sub').innerHTML = sub;
+
+    let multi = (A * B);
+    document.getElementById('multi').innerHTML = multi;
+
+    let div = (A / B);
+    document.getElementById('div').innerHTML = div;
+
+    let mod = (A % B);
+    document.getElementById('mod').innerHTML = mod;
+</script>
+</html>
