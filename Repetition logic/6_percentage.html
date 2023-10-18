@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>percentage</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        h2{
+            color: #d2691e;
+            font-size: 40px;
+            text-align: center;
+            }
+        h3{
+            color: #deb887;
+            font-size: 40px;
+            text-align: center;
+        }    
+    </style>
+</head>
+<body>
+    <h1>Enter Given subject marks and calculate percentage and grade according to.</h1>
+    <h2 id="demo1"></h2>
+    <h3 id="demo"></h3>
+</body>
+<script>
+    let physi=parseInt(prompt("Enter physi marks: "));
+    let chemi=parseInt(prompt("Enter chemi marks: "));
+    let bio=parseInt(prompt("Enter bio marks: "));
+    let math=parseInt(prompt("Enter math marks: "));
+    let com=parseInt(prompt("Enter com marks: "));
+    let per=(physi + chemi + bio + math + com)*100/500;
+            document.getElementById("demo1").innerHTML = "Your percentage " + per; 
+        if(per>=90){
+            document.getElementById("demo").innerHTML="Your Grade A";
+        }else if(per>=80){
+            document.getElementById("demo").innerHTML="Your Grade B";
+        }else if(per>=70){
+            document.getElementById("demo").innerHTML="Your Grade C";
+        }else if(per>=60){
+            document.getElementById("demo").innerHTML="Your Grade D";
+        }else if(per>=50){
+            document.getElementById("demo").innerHTML="Your Grade E";
+        }else if(per>=33){
+            document.getElementById("demo").innerHTML="Your Grade F";
+        }else{
+            document.getElementById("demo").innerHTML="You are Fail";
+
+        }
+</script>
+</html>

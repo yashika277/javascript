@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>greater number</title>
+</head>
+<style>
+    h1{
+        color: #a52a2a;
+        text-align: center;
+        font-size: 40px;
+    }
+    h2{
+        color: #ff7f50;
+        text-align: center;
+        font-size: 30px;
+    }
+</style>
+<body>
+    <h1>using ladder if Max-4 Value</h1>
+    <h2 id="max"></h2>
+</body>
+<script>
+    let a=parseInt(prompt("Enter value A:"));
+    let b=parseInt(prompt("Enter value B:"));
+    let c=parseInt(prompt("Enter value C:"));
+    let d=parseInt(prompt("Enter value D:"));
+    let greter;
+        if(a>b && a>c && a>d){
+            greter ='A is Greter';
+        }else if(b>c && b>d && b>a){
+            greter ='B is Greter';
+        }else if(c>d && c>a && c>b){
+            greter ='C is Greter';
+        }else{
+            greter ='D is Greter';
+        }
+        document.getElementById('max').innerHTML = greter;
+
+</script>
+</html>

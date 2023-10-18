@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positive or negative</title>
+</head>
+
+<body>
+    <h1>check number positive and negetive :</h1>
+    <h2 id="demo"></h2>
+</body>
+<script>
+        let num=parseInt(prompt("Enter number:"));
+   
+        if (num > 0) {
+            document.getElementById('demo').innerHTML = 'Number is a Positive';
+        }
+        else if (num == 0) {
+            document.getElementById('demo').innerHTML = 'Number is not a Positive number or negetive number';
+        }
+        else {
+            document.getElementById('demo').innerHTML = 'Number is a Negative';
+        }
+        
+</script>
+
+</html>

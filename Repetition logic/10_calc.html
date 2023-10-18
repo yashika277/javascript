@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+
+<body>
+    <h1>JavaScript program to create basic calculator using switch case.</h1>
+    <h2 id="demo"></h2>
+</body>
+<script>
+    let operator = prompt("Enter operation +, -, *, /: ");
+    let a = parseInt(prompt("Enter first number: "));
+    let b = parseInt(prompt("Enter second number: "));
+    let ans;
+    switch (operator) {
+        case "+":
+            ans = a + b;
+            document.getElementById('demo').innerHTML = ('A + B =') + ans;
+            break;
+        case "-":
+            ans = a - b;
+            document.getElementById('demo').innerHTML = ('A - B =') + ans;
+            break;
+        case "*":
+            ans = a * b;
+            document.getElementById('demo').innerHTML = ('A * B =') + ans;
+            break;
+        case "/":
+            ans = a / b;
+            document.getElementById('demo').innerHTML = ('A /B =') + ans;
+            break;
+        default:
+            document.getElementById("demo").innerHTML = "Invalid operator";
+    }
+</script>
+
+</html>

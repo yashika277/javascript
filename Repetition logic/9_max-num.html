@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>max number</title>
+    <style>
+        h1 {
+            color: #0000ff;
+        }
+
+        h2 {
+            color: #6495ed;
+            font-size: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>using nested if max-4 value</h1>
+    <h2 id="number"></h2>
+</body>
+<script>
+    let a = prompt('Enter number A :');
+    let b = prompt('Enter number B :');
+    let c = prompt('Enter number C :');
+    let d = prompt('Enter number D :');
+    if (a > b) {
+        if (a > c) {
+            if (a > d) {
+                document.getElementById('number').innerHTML = (a + ' is big number')
+            } else {
+                document.getElementById('number').innerHTML = (d + ' is big number')
+            }
+        } else if (c > d) {
+            document.getElementById('number').innerHTML = (c + ' is big number')
+        } else {
+            document.getElementById('number').innerHTML = (d + ' is big number')
+        }
+    } else if (b > c) {
+        if (b > d) {
+            document.getElementById('number').innerHTML = (b + ' is big number')
+        } else {
+            document.getElementById('number').innerHTML = (d + ' is big number')
+        }
+    } else if (c > d) {
+        document.getElementById('number').innerHTML = (c + ' is big number')
+    } else {
+        document.getElementById('number').innerHTML = (d + ' is big number')
+    }
+</script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week</title>
+</head>
+<body>
+    <h1>JavaScript program to find week day from first letter of it using if else if.</h1>
+    <h2 id="day"></h2>
+</body>
+<script>
+    let day;
+        let string = prompt('Enter first letter of day and get day name : ');
+        if(string == 's' || string == 'S'){
+            document.getElementById("day").innerHTML="Sunday";
+        }else if(string == 'M' || string == 'm'){
+            document.getElementById("day").innerHTML="Monday";
+        }else if(string == 't' || string == 'tu'){
+            document.getElementById("day").innerHTML="tuesday";
+        }else if(string == 'w' || string == 'W'){
+            document.getElementById("day").innerHTML="Wednesday";
+        }else if(string == 'th' || string == 't'){
+            document.getElementById("day").innerHTML="Thursday";
+        }else if(string == 'f' || string == 'F'){
+            document.getElementById("day").innerHTML="Friday";
+        }else if(string == 'sa' || string == 'SA'){
+            document.getElementById("day").innerHTML="Saturday";
+        }else{
+            document.getElementById("day").innerHTML="Invalid Day";
+        }
+</script>
+</html>

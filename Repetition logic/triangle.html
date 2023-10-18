@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>triangle</title>
+</head>
+
+<body>
+    <h1>check in a triangle is valid or not</h1>
+    <h2 id="msg"></h2>
+    <h3 id="test"></h3>
+</body>
+<script>
+    const a = parseInt(prompt("Enter 1 number: "));
+    const b = parseInt(prompt("Enter 2 number: "));
+    const c = parseInt(prompt("Enter 3 number: "));
+    let sum = a + b + c;
+    document.getElementById('msg').innerHTML = "Three value sum " + sum;
+
+    if (sum == 180 && a != 0 && b != 0 && c != 0) {
+        document.getElementById('test').innerHTML = "This triangle is valid";
+    } else {
+        document.getElementById('test').innerHTML = "This triangle is not valid";
+    }
+</script>
+</html>

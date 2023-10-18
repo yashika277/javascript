@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leddar</title>
+</head>
+
+<body>
+    <h2>JavaScript program to create basic calculator using ledder if else.</h2>
+    <h3 id="demo"></h3>
+</body>
+<script>
+    let operator = prompt("Enter operation +, -, *, /: ");
+    let a = parseInt(prompt("Enter first number: "));
+    let b = parseInt(prompt("Enter second number: "));
+    let ans;
+
+    if (operator == "+") {
+        ans = a + b;
+        document.getElementById("demo").innerHTML = " Addition = " + ans;
+    } else if (operator == "-") {
+        ans = a - b;
+        document.getElementById("demo").innerHTML = "Subtraction = " + ans;
+    } else if (operator === "*") {
+        ans = a * b;
+        document.getElementById("demo").innerHTML = "Multiplication = " + ans;
+    } else if (operator == "/") {
+        ans = a / b;
+        document.getElementById("demo").innerHTML = "Division = " + ans;
+    } else {
+        document.getElementById("demo").innerHTML = "Invalid operator";
+    }
+</script>
+
+</html>
