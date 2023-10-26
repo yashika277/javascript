@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print 1 to n number and all number sum </title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let n = parseInt(prompt("Enter Number:"));
+    let i = 1,
+        sum = 0;
+    do {
+        document.write(i + "<br>");
+        sum += i;
+        i++;
+    } while (i <= n);
+    document.write("sum of all number is: " + sum);
+</script>
+
+</html>
