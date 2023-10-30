@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traiangle</title>
+</head>
+
+<body>
+    <p id="result"></p>
+</body>
+<script>
+    let a1 = parseInt(prompt("Enter first angle of triangle "));
+    let a2 = parseInt(prompt("Enter second angle of triangle "));
+    let a3 = parseInt(prompt("Enter third angle of triangle "));
+
+    triangle = () => {
+        let sum = a1 + a2 + a3;
+
+        if (sum === 180 && a1 > 0 && a2 > 0 && a3 > 0) {
+            return ("It's a valid triangle.");
+        }
+        else {
+            return ("It's not a valid triangle.");
+        }
+    }
+    document.getElementById('result').innerHTML = triangle();
+</script>
+
+</html>

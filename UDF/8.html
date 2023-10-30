@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+</head>
+
+<body>
+    <p id="result"></p>
+</body>
+<script>
+    let a = parseFloat(prompt("Enter first number: "));
+    let b = parseFloat(prompt("Enter second number: "));
+
+    calculator = () => {
+
+        let choice = prompt("Enter any choice form '+', '-', '*', '/' ");
+        switch (choice) {
+            case "+":
+                return (`Sum is : ${a + b}`);
+                break;
+            case "-":
+                return (`Substraction is : ${a - b}`);
+                break;
+            case "*":
+                return (`Multiplication is : ${a * b}`);
+                break;
+            case "/":
+                return (`Division is : ${a / b}`);
+                break;
+            default:
+                return (`Invalid Input!`);
+                break;
+        }
+    }
+    document.getElementById('result').innerHTML = calculator();
+</script>
+
+</html>
