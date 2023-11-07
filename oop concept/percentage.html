@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class students{
+    constructor(){
+        this.physics = parseInt(prompt("Enter marks of physics: "));
+        this.chemistry = parseInt(prompt("Enter marks of Chemistry: "));
+        this.biology = parseInt(prompt("Enter marks of Biology: "));
+        this.mathamatics = parseInt(prompt("Enter marks of mathematics: "));
+        this.computer = parseInt(prompt("Enter marks of computer: ")); 
+    }
+    Percentage(){
+        let totalMarks = this.physics + this.chemistry + this.biology + this.mathamatics + this.computer;
+        let percentage = (totalMarks/500)*100;
+
+        return percentage.toFixed(2);
+    }
+    Grade(){
+        let percentage = this.Percentage();
+
+        if(percentage >= 90){
+            return this.grade = "Grade A";
+        }
+        else if(percentage >= 80){
+            return this.grade = "Grade B";
+        }
+        else if(percentage >= 70){
+            return this.grade = "Grade C";
+        }
+        else if(percentage >= 60){
+            return this.grade = "Grade D";
+        }
+        else if(percentage >= 50){
+            return this.grade = "Grade E";
+        }
+        else if(percentage >= 40){
+            return this.grade = "Grade F";
+        }
+        else {
+            return this.grade = "Failed";
+        }
+    }
+}
+let sub = new students();
+let percentage = sub.Percentage();
+let grade = sub.Grade();
+document.write("Percentage: "+percentage+"%" );
+document.write(grade);
+</script>
+</html>
