@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set countDown Date</title>
+    <style>
+        p {
+            text-align: center;
+            font-size: 50px;
+            margin-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="count"></p>
+</body>
+<script>
+    setInterval(function () {
+            var countDownDate = new Date("feb 3, 2024 15:37:25").getTime();
+            var now = new Date().getTime();
+
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("count").innerHTML = days + "d " + hours + "h "+ minutes + "m " + seconds + "s ";
+        }, 3000);
+</script>
+
+</html>
