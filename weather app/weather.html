@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather api</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" id="city" placeholder="enter your city">
+            <button onclick="search()"><img src="images/search.png"></button>
+        </div>
+        <div class="weather">
+            <img src="images/rain.png" alt="" class="weathe-icon">
+            <h1 class="temp">22°C</h1>
+            <h2 class="city-name">New York</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png" alt="">
+                    <p class="humidity">50</p>
+                    <p>Humidity</p>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png" alt="">
+
+                    <p class="Wind">15 km/h</p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    let temp = document.querySelector('.temp');
+    let city_Name = document.querySelector('.city-name');
+    let humidity = document.querySelector('.humidity');
+    let wind = document.querySelector('.wind');
+
+    function search() {
+
+        getData();
+    }
+    async function getData() {
+
+        let city = document.getElementById('city').value;
+        const API_key = "0eef2234c0c7ef1cd7af28002a283460";
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}`;
+
+
+        try {
+            const response = await fetch(`${url}`);
+            const result = await response.json();
+            console.log(result);
+            temp.innerHTML = `${Math.round(result.main.temp - 273.15)}ºc`;
+            city_Name.innerHTML = `${city}`;
+            humidity.innerHTML = `${result.main.humidity}%`;
+            wind.innerHTML = `${result.wind.speed} km/h`;
+
+        }
+        catch (error) {
+            console.log("Error:", error);
+        }
+    };
+
+
+    
+
+</script>
+
+</html>
